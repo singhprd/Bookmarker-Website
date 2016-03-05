@@ -1,0 +1,46 @@
+* {
+/*  border:1px solid black;*/
+}
+
+body {
+  padding: 10px;
+  margin: 10px;
+}
+.navbar {
+  background-color: tomato;
+  float: top;
+  height: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar div {
+  background-color: goldenrod;
+  float: right;
+  height: 5em;
+  width: 5em;
+  margin: 20px;
+  text-align: center;
+  vertical-align: center;
+  font-size: 1em;
+  }
+
+
+.main_list {
+  list-style: none;
+  width: 100%;
+}
+
+.item {
+  float: left;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  border: 2px solid black;
+  margin: 10px
+}
+
+
+
+
+

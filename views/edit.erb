@@ -1,0 +1,13 @@
+<h2>Edit Bookmark</h2>
+
+<form action="/edit/<%= @bookmark.id %>" method="post">
+
+<label for="name">Name: </label>
+<input type="text" name="name"></input>
+
+<label for="address">Bookmark URL: </label>
+<input type="text" name="address"></input>
+
+<input type="submit" value="Edit Bookmark"></input>
+
+</form>

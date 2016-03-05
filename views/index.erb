@@ -1,0 +1,20 @@
+<ul class="main_list">
+    <% @bookmarks.each do |bookmark|  %>
+  <li class="item">
+
+    <b>Name:</b>
+    <%= bookmark.name %>
+
+    <b>Address: </b>
+    <%= bookmark.address  %>
+
+    <a href="/edit/ <%= bookmark.id  %>">Edit</a>
+
+    <a href="/delete/<%= bookmark.id %>">Delete</a>
+
+    <a href="/<%= bookmark.id %>">Show</a>
+
+  </li>
+    <% end  %>
+    
+</ul>
