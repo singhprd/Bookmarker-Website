@@ -42,8 +42,8 @@ attr_reader :name, :address, :id
       Bookmark.run_sql( sql )
   end
 
-  def destroy
-    sql = "DELETE FROM bookmarks WHER E id = #{id}"
+  def self.destroy( id )
+    sql = "DELETE FROM bookmarks WHERE id = #{id}"
     Bookmark.run_sql( sql )
   end
 

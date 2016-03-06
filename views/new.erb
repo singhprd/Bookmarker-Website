@@ -1,13 +1,20 @@
 <h2>Create New Bookmark</h2>
 
-<form action="/new" method="post">
+<ul class="main_list">
+  <li class="item">
 
-<label for="name">Name: </label>
-<input type="text" name="name"></input>
 
-<label for="address">Bookmark URL: </label>
-<input type="text" name="address"></input>
+    <form action="/bookmarks" method="post">
 
-<input type="submit" value="Create Bookmark"></input>
+    <label for="name">Name: </label>
+    <input type="text" name="name"></input>
 
-</form>
+    <label for="address">Bookmark URL: </label>
+    <input type="text" name="address"></input>
+
+    <input type="submit" value="Create Bookmark"></input>
+
+    </form>
+
+  </li>
+</ul>

@@ -1,9 +1,19 @@
-<b>Name:</b>
-<%= @bookmark.name %>
+<ul class="main_list">
 
-<b>Address: </b>
-<%= @bookmark.address  %>
+  <li class="item">
 
-<a href="/edit/ <%= @bookmark.id  %>">Edit</a>
+    <b>Name:</b>
+    <%= @bookmark.name %>
 
-<a href="/delete/<%= @bookmark.id %>">Delete</a>
+    <b>Address: </b>
+    <%= @bookmark.address  %>
+
+<a href="/bookmarks/<%= @bookmark.id %>/edit">Edit Bookmark</a>
+
+<form action="/bookmarks/<%= @bookmark.id %>/delete" method="post">
+<input type="submit" value="Delete"> </input>
+</form>
+
+  </li>
+
+</ul>

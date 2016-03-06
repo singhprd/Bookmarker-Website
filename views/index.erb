@@ -8,11 +8,9 @@
     <b>Address: </b>
     <%= bookmark.address  %>
 
-    <a href="/edit/ <%= bookmark.id  %>">Edit</a>
 
-    <a href="/delete/<%= bookmark.id %>">Delete</a>
+    <a href="/bookmarks/<%= bookmark.id %>">Show</a>
 
-    <a href="/<%= bookmark.id %>">Show</a>
 
   </li>
     <% end  %>

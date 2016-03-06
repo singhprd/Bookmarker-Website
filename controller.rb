@@ -2,40 +2,55 @@ require 'sinatra'
 require 'sinatra/contrib/all'
 require_relative 'models/bookmark'
 
-
-get '/' do
+# INDEX
+get '/bookmarks' do
   @bookmarks = Bookmark.all()
-  erb :index
+  erb(:index)
 end
 
-get '/new' do
-  erb :new
+# NEW
+get '/bookmarks/new' do
+  erb(:new)
 end
 
-post '/new' do
+# CREATE
+post '/bookmarks' do
   @bookmark = Bookmark.new( params )
   @bookmark.save
-  redirect to('/')
+  redirect to('/bookmarks')
 end
 
-get '/edit/:id' do
+# EDIT
+get '/bookmarks/:id/edit' do
   @bookmark = Bookmark.find( params['id'] )
-  erb :edit
+  erb(:edit)
 end
 
-post '/edit/:id' do
+# UPDATE
+post '/bookmarks/:id' do
   @bookmark = Bookmark.update( params )
-  redirect to('/')
+  redirect to('/bookmarks')
 end
 
-post '/delete/:id' do
-  Bookmark.destroy( params[:id] )
-  redirect to( '/pizza' )
-  redirect to('/')
-end
+# post '/pizza/:id' do
+#   @pizza = Pizza.update( params )
+#   redirect to("pizza/#{params[:id]}")
+# end
 
-get '/:id' do
+# SHOW
+get '/bookmarks/:id' do
   @bookmark = Bookmark.find( params[:id] )
-  erb( :show )
+  erb(:show)
 end
 
+# DESTROY
+post '/bookmarks/:id/delete' do
+  Bookmark.destroy( params[:id] )
+  redirect to('/bookmarks')
+end
+
+
+# # REDIRECT
+get '/' do
+  redirect to('/bookmarks')
+end
