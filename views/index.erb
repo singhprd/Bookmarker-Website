@@ -2,14 +2,19 @@
     <% @bookmarks.each do |bookmark|  %>
   <li class="item">
 
+<p>  
     <b>Name:</b>
     <%= bookmark.name %>
+</p>
 
+<p>
     <b>Address: </b>
     <%= bookmark.address  %>
+</p>
 
-
+<p>
     <a href="/bookmarks/<%= bookmark.id %>">Show</a>
+</p>
 
 
   </li>

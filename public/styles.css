@@ -1,5 +1,6 @@
 * {
   /*border:1px solid black;*/
+
 }
 
 body {
@@ -8,34 +9,47 @@ body {
   background-color: #dbb700; 
 }
 
-.edit {
-  background-color: black;
-}
 
-
-.navbar {
-  background-color: black;
-  float: top;
-  height: 150px;
-  padding: 0;
+.ul_nav {
+  list-style-type: none;
   margin: 0;
+  padding: 0;
+  background-color: goldenrod;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  z-index: +1;
 }
 
-.navbar div {
-  background-color: #b7c7bd;
-  float: right;
-  height: 5em;
-  width: 5em;
-  margin: 20px;
+.ul_nav li {
+  float: left;
+  background-color: #333;
+  margin: 1em;
+  border-radius: 13px;
+}
+
+
+.ul_nav li a {
+  display: block;
+  color: tomato;
   text-align: center;
-  vertical-align: center;
-  font-size: 1em;
-  }
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.ul_nav li a:hover {
+  background-color: black;
+  border-radius: 10px;
+}
+
 
 
 .main_list {
   list-style: none;
-  width: 100%;
+  width: auto;
+  position: relative;
+  top: 80px;
 }
 
 .item {
